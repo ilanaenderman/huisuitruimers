@@ -6,8 +6,6 @@ const pug 		 = require('pug')
 const pg 		 = require('pg')
 const session 	 = require('express-session')
 const bcrypt 	 = require('bcrypt-node')
-const sass 		 = require('node-sass')
-const Mollie	 = require('mollie-api-node')
 const Multer	 = require('multer')
 const app	 	 = express()
 
@@ -29,6 +27,9 @@ app.use(session({
 
 
 // Initialize Routes
+let homeRoute 	= require(__dirname + '/routes/home')
+
+app.use(homeRoute)
 
 
 // Listen port 8000
