@@ -31,7 +31,7 @@ a {
     outline: none; }
 
 p {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 400; }
 
@@ -57,6 +57,15 @@ h1, h2, h3, h4, h5, h6, figure {
 #logo {
   max-height: 150px;
   display: block; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 10px; }
+
+.container {
+  width: 95%; }
 
 .btn {
   margin-right: 4px;
@@ -254,7 +263,7 @@ h1, h2, h3, h4, h5, h6, figure {
       padding-bottom: 1em; } }
 
 #fh5co-header {
-  padding: 20px 0;
+  padding: 10px 0;
   width: 100%;
   margin: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -291,7 +300,7 @@ h1, h2, h3, h4, h5, h6, figure {
         outline: none; }
   #fh5co-header nav {
     float: right;
-    padding-top: 60px; }
+    padding-top: 50px; }
     @media screen and (max-width: 768px) {
       #fh5co-header nav {
         display: none; } }
@@ -402,7 +411,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding-top: 20px; }
 
 #fh5co-intro-section {
-  padding-top: 20px; }
+  padding-top: 50px; }
   #fh5co-intro-section h2 {
     font-weight: 400;
     font-size: 40px;
@@ -608,22 +617,18 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .blog-inner {
   background: white;
-  -webkit-box-shadow: 0px 9px 29px -9px rgba(0, 0, 0, 0.13);
-  -moz-box-shadow: 0px 9px 29px -9px rgba(0, 0, 0, 0.13);
-  -ms-box-shadow: 0px 9px 29px -9px rgba(0, 0, 0, 0.13);
-  -o-box-shadow: 0px 9px 29px -9px rgba(0, 0, 0, 0.13);
-  box-shadow: 0px 9px 29px -9px rgba(0, 0, 0, 0.13);
+  border: 1px solid #E6E6E6;
   overflow: hidden;
   margin-bottom: 40px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
   .blog-inner .desc {
-    padding: 20px; }
+    padding: 10px; }
     .blog-inner .desc h3 {
       line-height: 28px; }
       .blog-inner .desc h3 a {
@@ -641,10 +646,10 @@ h1, h2, h3, h4, h5, h6, figure {
   background: rgba(45, 64, 89, 0.06);
   padding: 40px 20px 20px 20px;
   position: relative;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px; }
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px; }
   @media screen and (max-width: 768px) {
     .testimony {
       margin-bottom: 60px; } }
@@ -760,7 +765,7 @@ h1, h2, h3, h4, h5, h6, figure {
       height: 200px; } }
 
 #fh5co-footer {
-  padding: 7em 0;
+  padding: 50px;
   float: left;
   width: 100%;
   position: relative;

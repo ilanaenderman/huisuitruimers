@@ -3,7 +3,7 @@ $font-secondary: 'Playfair Display', Arial, serif;
 
 // Overrides
 $grid-gutter-width: 40px !default; 
-$border-radius-base:  4px !default;
+$border-radius-base:  0px !default;
 $padding-base-vertical: 14px !default;
 
 $brand-primary: #F89900 !default;
@@ -127,7 +127,7 @@ a {
 	}
 }
 p {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	font-size: 16px;
 	font-weight: 400;
 }
@@ -159,6 +159,16 @@ h1, h2, h3, h4, h5, h6, figure {
 
 }
 
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	padding: 10px;
+}
+
+.container {
+	width: 95%;
+}
 
 // Buttons
 .btn {
@@ -380,7 +390,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-header {
 	// position: absolute;
 	// z-index: 1001;
-	padding: 20px 0;
+	padding: 10px 0;
 	width: 100%;
 	margin: 0;
 	// background: lighten($brand-black, 15%);
@@ -439,7 +449,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 	nav {
 		float: right;
-		padding-top: 60px;
+		padding-top: 50px;
 		@media screen and (max-width: $screen-sm) {
 			display: none;
 		}
@@ -556,7 +566,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-intro-section{
-	padding-top: 20px;
+	padding-top: 50px;
 	h2{
 		font-weight: 400;
 		font-size: 40px;
@@ -777,20 +787,21 @@ h1, h2, h3, h4, h5, h6, figure {
 //Blog
 .blog-inner{
 	background: rgba($brand-white,1);
-	-webkit-box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
-	-moz-box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
-	-ms-box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
-	-o-box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
-	box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
+	// -webkit-box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
+	// -moz-box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
+	// -ms-box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
+	// -o-box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
+	// box-shadow: 0px 9px 29px -9px rgba(0,0,0,0.13);
+	border: 1px solid #E6E6E6;
 	overflow: hidden;
 	margin-bottom: 40px;
-	@include border-radius(4px);
+	@include border-radius(0px);
 	@include transition(.3s);
 	//img{
 		//@include border-radius(4px);
 	//}
 	.desc{
-		padding: 20px;
+		padding: 10px;
 		h3{
 			line-height: 28px;
 			a{
@@ -818,7 +829,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	@media screen and (max-width: $screen-sm){
 		margin-bottom: 60px;
 	}
-	@include border-radius(4px);
+	@include border-radius(0px);
 	.quote{
 		position: absolute;
 		top: -40px;
@@ -955,7 +966,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-footer {
-	padding: 7em 0;
+	padding: 50px;
 	float: left;
 	width: 100%;
 	position: relative;
