@@ -3,9 +3,9 @@ html.no-js
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title Home Klok en Prins de Huisuitruimers
+    title Klok en Prins de Huisuitruimers
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='description', content='Klok en Prins de Huisuitruimers')
+    meta(name='description', content='Klok en Prins de Huisuitruimers helpen u een helpen de hand bij het uitruimen van een woning')
     meta(name='keywords', content='Huisuitruimers, Haarlem, huisoperuimers, verhuizen, Prins, Klok')
     meta(name='Ilana Enderman')
    
@@ -68,53 +68,53 @@ html.no-js
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
                 a(href='#')
-                  img.img-responsive(src='images/image_6.jpg', alt='Blog')
+                  img.img-responsive(src='images/movingbox.jpg', alt='Blog')
                 .desc
                   h3
                     b Onze diensten
                   p
                     | Wij ontzorgen niet alleen bij het leeghalen van een woning, bedrijf of garage maar wij gaan een stap verder
                   p
-                    a.btn.btn-primary.btn-outline.with-arrow(href='#')
+                    a.btn.btn-primary.btn-outline.with-arrow(href='/services')
                       | Lees meer
                       i.icon-arrow-right
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
                 a(href='#')
-                  img.img-responsive(src='images/image_6.jpg', alt='Blog')
+                  img.img-responsive(src='images/movingbox.jpg', alt='Blog')
                 .desc
                   h3
                     b Wie zijn wij?
                   p
                     | Persoonlijkheid en vakkundigheid staan bij ons hoog in het vaandel. Wij stellen ons graag aan u voor.
                   p
-                    a.btn.btn-primary.btn-outline.with-arrow(href='#')
+                    a.btn.btn-primary.btn-outline.with-arrow(href='/about')
                       | Lees meer
                       i.icon-arrow-right
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
                 a(href='#')
-                  img.img-responsive(src='images/image_6.jpg', alt='Blog')
+                  img.img-responsive(src='images/movingbox.jpg', alt='Blog')
                 .desc
                   h3
                     b Contact
                   p
                     | Kunnen wij een offerte voor u opmaken of wilt u meer informatie? Neem gerust contact met ons op.
                   p
-                    a.btn.btn-primary.btn-outline.with-arrow(href='#')
+                    a.btn.btn-primary.btn-outline.with-arrow(href='/contact')
                       | Lees meer
                       i.icon-arrow-right
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
                 a(href='#')
-                  img.img-responsive(src='images/image_6.jpg', alt='Blog')
+                  img.img-responsive(src='images/movingbox.jpg', alt='Blog')
                 .desc
                   h3
                     b Nieuws
                   p
                     | Laatste nieuws over ons bedrijf en alle doelen die wij steunen in Haarlem en omgeving. 
                   p
-                    a.btn.btn-primary.btn-outline.with-arrow(href='#')
+                    a.btn.btn-primary.btn-outline.with-arrow(href='/news')
                       | Lees meer
                       i.icon-arrow-right
       
@@ -123,13 +123,21 @@ html.no-js
           h3 Contact
           ul.float
             li
-              p info@dehuisuitruimers.nl
+              a(href="mailto:info@dehuisuitruimers.nl") info@dehuisuitruimers.nl
             li
-              p Ruud Klok 06 - 83 99  75 38
+              a(href="tel:+31683997538") Ruud Klok 06 - 83 99  75 38
             li
-              p Erwin Prins 06 - 30 23 19 74
+              a(href="tel:+31630231974") Erwin Prins 06 - 30 23 19 74
 
         .col-md-6.col-md-push-1.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+          h3 In samenwerking met
+          ul.float
+            li
+              a(href='#') Autoverhuurbedrijf de Rijdende Wielen te Haarlem
+            li
+              a(href='#') Tweedehandswinkel Rataplan te Beverwijk
+            li
+              a(href='#') Tweedehandswinkel Seconhand te Zandvoort
           
         .col-md-2.col-md-push-1.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
           h3 Volg ons op
@@ -147,12 +155,10 @@ html.no-js
                 i.icon-instagram
                 |  Instagram
         .col-md-12.fh5co-copyright.text-center
-          p
+          p#copyrightText
             | © 2017 Klok & Prins De Huisuitruimers
             span
-              | Ontworpen met  
-              i.icon-heart
-              |  door 
+              | Ontworpen door 
               a(href='http://ilanaenderman.com/', target='_blank') Ilana Enderman
     // jQuery
     script(src='js/jquery.min.js')

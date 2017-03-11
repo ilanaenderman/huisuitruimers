@@ -28,8 +28,15 @@ app.use(session({
 
 // Initialize Routes
 let homeRoute 	= require(__dirname + '/routes/home')
+let servicesRoute = require(__dirname +'/routes/services')
+let aboutRoute = require(__dirname + '/routes/about')
+let contactRoute = require(__dirname + '/routes/contact')	
+let newsRoute = require(__dirname + '/routes/news')
 
 app.use(homeRoute)
+app.use(servicesRoute)
+app.use(aboutRoute)
+app.use(contactRoute)
 
 
 // Listen port 8000

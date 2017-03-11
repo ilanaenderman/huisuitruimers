@@ -236,6 +236,7 @@
 }
 .sl-icon-phone:before {
   content: "\e600";
+  color: #F89900;
 }
 .sl-icon-call-end:before {
   content: "\e048";
@@ -248,6 +249,7 @@
 }
 .sl-icon-map:before {
   content: "\e033";
+  color: #F89900;
 }
 .sl-icon-location-pin:before {
   content: "\e096";
@@ -386,6 +388,7 @@
 }
 .sl-icon-envelope-open:before {
   content: "\e01e";
+  color: #F89900;
 }
 .sl-icon-envelope-letter:before {
   content: "\e01f";

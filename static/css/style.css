@@ -35,9 +35,14 @@ p {
   font-size: 16px;
   font-weight: 400; }
 
+#copyrightText {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0px; }
+
 h1, h2, h3, h4, h5, h6, figure {
   color: rgba(0, 0, 0, 0.7);
-  font-family: "Playfair Display", Arial, serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0;
   letter-spacing: 1px; }
@@ -55,7 +60,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #F89900; }
 
 #logo {
-  max-height: 150px;
+  max-height: 110px;
   display: block; }
 
 .img-responsive {
@@ -300,7 +305,7 @@ h1, h2, h3, h4, h5, h6, figure {
         outline: none; }
   #fh5co-header nav {
     float: right;
-    padding-top: 50px; }
+    padding-top: 45px; }
     @media screen and (max-width: 768px) {
       #fh5co-header nav {
         display: none; } }
@@ -317,7 +322,7 @@ h1, h2, h3, h4, h5, h6, figure {
         *display: inline; }
         #fh5co-header nav ul li a {
           color: rgba(0, 0, 0, 0.5);
-          font-size: 20px;
+          font-size: 16px;
           padding: 12px 15px;
           position: relative;
           -webkit-transition: 0.2s;
@@ -388,7 +393,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-main-services-section,
 #fh5co-about-section,
 #fh5co-contact-section {
-  padding-bottom: 20px; }
+  padding-bottom: 0px; }
   @media screen and (max-width: 768px) {
     #fh5co-featured-section,
     #fh5co-intro-section,
@@ -408,14 +413,14 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-main-services-section,
 #fh5co-about-section,
 #fh5co-contact-section {
-  padding-top: 20px; }
+  padding-top: 40px; }
 
 #fh5co-intro-section {
-  padding-top: 50px; }
+  padding-top: 40px; }
   #fh5co-intro-section h2 {
     font-weight: 400;
     font-size: 40px;
-    font-family: "Playfair Display", Arial, serif;
+    font-family: "Roboto", Arial, sans-serif;
     letter-spacing: 1px;
     line-height: 50px; }
 
@@ -660,7 +665,7 @@ h1, h2, h3, h4, h5, h6, figure {
     right: 0;
     margin-left: -30px; }
     .testimony .quote i {
-      font-family: "Playfair Display", Arial, serif;
+      font-family: "Roboto", Arial, sans-serif;
       font-size: 30px;
       width: 80px;
       height: 80px;
@@ -686,7 +691,7 @@ h1, h2, h3, h4, h5, h6, figure {
       font-size: 20px;
       line-height: 1.6em;
       color: #999999;
-      font-family: "Playfair Display", Arial, serif; }
+      font-family: "Roboto", Arial, sans-serif; }
     .testimony blockquote span {
       color: rgba(0, 0, 0, 0.7); }
       .testimony blockquote span a {
@@ -738,7 +743,6 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #55acee !important; }
 
 .contact-info {
-  margin-bottom: 4em;
   padding: 0; }
   .contact-info li {
     list-style: none;
@@ -754,8 +758,11 @@ h1, h2, h3, h4, h5, h6, figure {
     .contact-info li a {
       color: #F89900; }
 
+#contact {
+  padding-bottom: 50px; }
+
 #map {
-  height: 500px;
+  height: 200px;
   width: 100%; }
   @media screen and (max-width: 768px) {
     #map {
@@ -765,7 +772,7 @@ h1, h2, h3, h4, h5, h6, figure {
       height: 200px; } }
 
 #fh5co-footer {
-  padding: 50px;
+  padding: 40px;
   float: left;
   width: 100%;
   position: relative;
@@ -778,7 +785,7 @@ h1, h2, h3, h4, h5, h6, figure {
   #fh5co-footer h3 {
     font-size: 18px; }
   #fh5co-footer [class*="col"] {
-    padding-bottom: 30px; }
+    padding-bottom: 0px; }
   #fh5co-footer .btn {
     color: #fff; }
   #fh5co-footer .float {
@@ -795,7 +802,7 @@ h1, h2, h3, h4, h5, h6, figure {
         color: rgba(255, 255, 255, 0.4);
         text-decoration: none !important; }
         #fh5co-footer ul li a:hover {
-          color: #fff; }
+          color: #F89900; }
   #fh5co-footer .fh5co-social li {
     display: block !important; }
     #fh5co-footer .fh5co-social li a {
@@ -808,7 +815,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   clear: both;
-  margin-top: 40px !important;
+  margin-top: 20px !important;
   padding: 40px 0 0 0; }
   .fh5co-copyright span {
     display: block; }

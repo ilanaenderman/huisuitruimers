@@ -132,9 +132,15 @@ p {
 	font-weight: 400;
 }
 
+#copyrightText {
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+
 h1, h2, h3, h4, h5, h6, figure {
 	color: rgba($brand-black,.7);
-	font-family: $font-secondary;
+	font-family: $font-primary;
 	font-weight: 400;
 	margin: 0 0 30px 0;
 	letter-spacing: 1px;
@@ -154,7 +160,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #logo {
-	max-height: 150px;
+	max-height: 110px;
 	display: block;
 
 }
@@ -449,7 +455,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 	nav {
 		float: right;
-		padding-top: 50px;
+		padding-top: 45px;
 		@media screen and (max-width: $screen-sm) {
 			display: none;
 		}
@@ -464,7 +470,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 				a {
 					color: rgba($brand-black,.5);
-					font-size: 20px;
+					font-size: 16px;
 					padding: 12px 15px;
 					position: relative;
 					@include transition(.2s);
@@ -550,11 +556,12 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-main-services-section,
 #fh5co-about-section,
 #fh5co-contact-section{
-	padding-bottom: 20px;
+	padding-bottom: 0px;
 	@media screen and (max-width: $screen-sm) {
 		padding: 3em 0;
 	}
 }
+
 #fh5co-services-section, 
 #fh5co-blog-section,
 #fh5co-client-section,
@@ -562,15 +569,15 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-main-services-section,
 #fh5co-about-section,
 #fh5co-contact-section{
-	padding-top: 20px;
+	padding-top: 40px;
 }
 
 #fh5co-intro-section{
-	padding-top: 50px;
+	padding-top: 40px;
 	h2{
 		font-weight: 400;
 		font-size: 40px;
-		font-family: $font-secondary;
+		font-family: $font-primary;
 		letter-spacing: 1px;
 		line-height: 50px;
 	}
@@ -837,7 +844,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		right: 0;
 		margin-left: -30px;
 		i{
-			font-family: $font-secondary;
+			font-family: $font-primary;
 			font-size: 30px;
 			width: 80px;
 			height: 80px;
@@ -862,7 +869,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			font-size: 20px;
 			line-height: 1.6em;
 			color: lighten($brand-black,60%);
-			font-family: $font-secondary;
+			font-family: $font-primary;
 		}
 		span{
 			color: rgba($brand-black,.7);
@@ -930,9 +937,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	color: #55acee !important;
 }
 
-.contact-info{
-	margin-bottom: 4em;
+.contact-info {
 	padding: 0;
+
 	li{
 
 		list-style: none;
@@ -954,8 +961,12 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
+#contact {
+	padding-bottom: 50px;
+}
+
 #map {
-	height: 500px;
+	height: 200px;
 	width: 100%;
 	@media screen and (max-width: $screen-sm) {
 		height: 400px;
@@ -966,7 +977,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-footer {
-	padding: 50px;
+	padding: 40px;
 	float: left;
 	width: 100%;
 	position: relative;
@@ -981,7 +992,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		font-size: 18px;
 	}
 	[class*="col"] {
-		padding-bottom: 30px;
+		padding-bottom: 0px;
 	}
 	.btn {
 		color: $brand-white;
@@ -1001,7 +1012,7 @@ h1, h2, h3, h4, h5, h6, figure {
 				color: rgba(255,255,255,.4);
 				text-decoration: none!important;
 				&:hover {
-					color: $brand-white;
+					color: $brand-primary;
 				}
 			}
 		}
@@ -1024,7 +1035,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-copyright {
 	border-top: 1px solid rgba(255,255,255,.1);
 	clear: both;
-	margin-top: 40px!important;
+	margin-top: 20px!important;
 	padding: 40px 0 0 0;
 	span {
 		display: block;

@@ -62,6 +62,7 @@
 }
 .icon-check:before {
     content: "\f00c";
+    color: #F89900;
 }
 .icon-close:before {
     content: "\f00d";
