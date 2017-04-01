@@ -48,6 +48,7 @@ html.no-js
             h1
               a(href='/')
                 img#logo(src='images/logo.png') 
+                
             nav(role='navigation')
               ul
                 li
@@ -114,27 +115,17 @@ html.no-js
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
                 a(href='#')
-                  - if(news === undefined)
-                    img.img-responsive(src= 'images/recycle.jpg')
-                  - else
-                    img.img-responsive(src= news.image alt='Blog')
+                  img.img-responsive(src= news.image alt='Blog')
                 .desc
                   h3.home
                     b Laatste nieuws
-                  -if(news === undefined)
-                    p.home1 
-                      b Nieuws
-                  - else
-                    p.home1
+                  p.home2
                       b #{news.title} 
-                  -if(news === undefined)
-                    p.home1 ...
-                  - else
-                    p.home1 #{news.date}
-                    p.home1
-                      a.btn.btn-primary.btn-outline.with-arrow(href='/news')
-                        | Lees meer
-                        i.icon-arrow-right
+                  p.home3 #{news.date}
+                  p.home1
+                    a.btn.btn-primary.btn-outline.with-arrow(href='/news')
+                      | Lees meer
+                      i.icon-arrow-right
       
       footer#fh5co-footer(role='contentinfo')
         .col-md-5.col-md-push-2.col-sm-4.col-xs-12.col-xs-push-0
@@ -187,5 +178,7 @@ html.no-js
     script(src='js/bootstrap.min.js')
     // Waypoints
     script(src='js/jquery.waypoints.min.js')
+    // masonry
+    <script src="/path/to/masonry.pkgd.min.js"></script>
     // MAIN JS
     script(src='js/main.js')
