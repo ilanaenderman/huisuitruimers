@@ -1,23 +1,15 @@
-doctype html
-//if lt IE 7
-  html.no-js.lt-ie9.lt-ie8.lt-ie7  
-//if IE 7
-  html.no-js.lt-ie9.lt-ie8  
-//if IE 8
-  html.no-js.lt-ie9  
-// [if gt IE 8] <!
 html.no-js
-  // <![endif]
+
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title Over ons
+    title Admin
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='Klok en Prins de Huisuitruimers helpen u een helpen de hand bij het uitruimen van een woning')
     meta(name='keywords', content='Huisuitruimers, Haarlem, huisoperuimers, verhuizen, Prins, Klok')
-    meta(name='author', content='Ilana Enderman')
-      
-    // Facebook and Twitter integration
+    meta(name='Ilana Enderman')
+   
+    //- Facebook and Twitter integration
     meta(property='og:title', content='')
     meta(property='og:image', content='')
     meta(property='og:url', content='')
@@ -27,24 +19,26 @@ html.no-js
     meta(name='twitter:image', content='')
     meta(name='twitter:url', content='')
     meta(name='twitter:card', content='')
-    // Place favicon.ico and apple-touch-icon.png in the root directory
+    
+    //- icons
     link(rel='shortcut icon', href='favicon.ico')
     link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700', rel='stylesheet')
-    // Animate.css
+    
+    //- Animate.css
     link(rel='stylesheet', href='css/animate.css')
-    // Icomoon Icon Fonts
+    //- Icomoon Icon Fonts
     link(rel='stylesheet', href='css/icomoon.css')
-    // Simple Line Icons
+    //- Simple Line Icons
     link(rel='stylesheet', href='css/simple-line-icons.css')
-    // Bootstrap
+    //- Bootstrap
     link(rel='stylesheet', href='css/bootstrap.css')
-    // Theme style
+    //- Theme style
     link(rel='stylesheet', href='css/style.css')
-    // Modernizr JS
+    //- Modernizr JS
     script(src='js/modernizr-2.6.2.min.js')
-    // FOR IE9 below
-    //if lt IE 9
+    //- FOR IE9 below
+    //-if lt IE 9
       script(src='js/respond.min.js')
   body
     #fh5co-page
@@ -61,40 +55,60 @@ html.no-js
                 li
                   a(href='/services') Onze diensten
                 li
-                  a.active(href='/about') Wie zijn wij?
+                  a(href='/about') Wie zijn wij?
                 li
                   a(href='/news') Nieuws
                 li
                   a(href='/contact') Contact
-                - if(admin === undefined)
-                  li 
-                - else
-                  li
-                    a(href='/admin') Admin
-                  li
-                    a(href='/logout') Log uit
-                    
-      #fh5co-about-section
-        .container
-          .row
-            .col-md-6.col-md-offset-3.text-center.fh5co-heading
-              h2 Wie zijn wij?
-          .row
-            .col-md-6
-              .row
-                .col-md-12#sidebar
-                  .about-inner-left
-                    img.img-reponsive#aboutImg(src= ruud.image alt='About')
-                    h3 #{ruud.name}
-                    p.aboutBottom #{ruud.info}
-            .col-md-6
-              .row
-                .col-md-12
-                  .about-inner-right
-                    img.img-reponsive#aboutImg(src= erwin.image alt='About')
-                    h3 #{erwin.name}
-                    p.aboutBottom #{erwin.info}
-                    
+                li
+                  a.active(href='/admin') Admin
+                li
+                  a(href='/logout') Log uit
+      
+      
+      div#fh5co-intro-section
+      each thing in news
+        div.container
+          div.row
+            div.col-md-8.col-md-offset-2.text-center
+              h2 Update nieuwsitem
+              h4#message= message
+          div.row
+            form(action='/updateArticle' method='post' enctype="multipart/form-data" autocomplete='off')
+              div.col-md-6
+                div.row
+                  div.col-md-12
+                    div.form-group
+                      input.form-control(name='title' placeholder= thing.title type='text') 
+                  div.col-md-12
+                    div.form-group
+                      input.form-control(name='date' placeholder= thing.date type='string')
+                  div.col-md-12
+                    div.form-group
+                      input.form-control(name='image' placeholder= thing.image type='file')
+              div.col-md-6
+                div.row
+                  div.col-md-12
+                    div.form-group
+                      textarea.form-control(name='body' placeholder= thing.body cols='30' rows='7')
+                  input#ID.form-control(name='id', value= thing.id type='hidden')
+
+              div.col-md-12
+                div.form-group
+                  input.btn.btn-primary(value='update' type='submit')
+
+          //- div.row
+          //-   form(action='/updateImage' method='post' enctype="multipart/form-date")
+          //-     div.col-md-6
+          //-       div.form-group
+          //-         label Kies Foto
+          //-         input.form-control(name='image' placeholder= thing.image type='file')
+          //-         input.form-control(name='newsId', value= thing.id type='hidden')
+          //-     div.col-md-6
+          //-       div.form-group
+          //-         input.btn.btn-primary(value='Verander afbeelding' type='submit')
+
+
       footer#fh5co-footer(role='contentinfo')
         .col-md-5.col-md-push-2.col-sm-4.col-xs-12.col-xs-push-0
           h3 Contact
@@ -131,6 +145,7 @@ html.no-js
               a(href='https://www.instagram.com/dehuisuitruimers/')
                 i.icon-instagram
                 |  Instagram
+
         .col-md-12.fh5co-copyright.text-center
           p#copyrightText
             | © 2017 Klok & Prins De Huisuitruimers
@@ -146,4 +161,4 @@ html.no-js
     // Waypoints
     script(src='js/jquery.waypoints.min.js')
     // MAIN JS
-    script(src='js/main.js')
+    script(src='js/main.js') 

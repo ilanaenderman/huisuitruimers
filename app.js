@@ -27,16 +27,25 @@ app.use(session({
 
 
 // Initialize Routes
-let homeRoute 	= require(__dirname + '/routes/home')
-let servicesRoute = require(__dirname +'/routes/services')
-let aboutRoute = require(__dirname + '/routes/about')
-let contactRoute = require(__dirname + '/routes/contact')	
-let newsRoute = require(__dirname + '/routes/news')
+let homeRoute 		= require(__dirname + '/routes/home')
+let servicesRoute 	= require(__dirname +'/routes/services')
+let aboutRoute 		= require(__dirname + '/routes/about')
+let contactRoute 	= require(__dirname + '/routes/contact')	
+let newsRoute 		= require(__dirname + '/routes/news')
+let newsArticleRoute= require(__dirname + '/routes/newsArticle')
+let loginRoute 		= require(__dirname + '/routes/login')
+let logoutRoute		= require(__dirname + '/routes/logout')
+let adminRoute 		= require(__dirname + '/routes/admin')
 
 app.use(homeRoute)
 app.use(servicesRoute)
 app.use(aboutRoute)
 app.use(contactRoute)
+app.use(newsRoute)
+app.use(newsArticleRoute)
+app.use(loginRoute)
+app.use(logoutRoute)
+app.use(adminRoute)
 
 
 // Listen port 8000

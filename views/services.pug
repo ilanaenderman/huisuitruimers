@@ -14,7 +14,7 @@ html.no-js
     title Onze diensten
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='Klok en Prins de Huisuitruimers helpen u een helpen de hand bij het uitruimen van een woning')
-    meta(name='keywords', content='Huisuitruimers, Haarlem, huisoperuimers, verhuizen, Prins, Klok')
+    meta(name='keywords', content='huisuitruimers, haarlem, huisoperuimers, verhuizen, Prins, Klok')
     meta(name='author', content='Ilana Enderman')
     
     // Facebook and Twitter integration
@@ -52,7 +52,7 @@ html.no-js
         .container
           .header-inner
             h1
-              a(href='home.html')
+              a(href='/')
                 img#logo(src='images/logo.png')
             nav(role='navigation')
               ul
@@ -66,6 +66,14 @@ html.no-js
                   a(href='/news') Nieuws
                 li
                   a(href='/contact') Contact
+                - if(admin === undefined)
+                  li 
+                - else
+                  li
+                    a(href='/admin') Admin
+                  li
+                    a(href='/logout') Log uit
+                    
       #fh5co-main-services-section
         .container
           .row
@@ -76,9 +84,19 @@ html.no-js
               .row
                 .col-md-12.services-inner
                   p
-                    | Als u of uw naasten moeten verhuizen naar een verzorgingstehuis of als een dierbare komt te overlijden dan moet er veel geregeld worden. Vaak staat uw hoofd er niet naar of is het werk gewoon teveel.  Meestal moet de woning worden ontruimt en schoon worden opgeleverd. In andere gevallen moet een woning verkocht worden maar moet er nog achterstallig werk worden verricht voordat de woning klaar is voor verhuur of verkoop.
-                  p 
-                    | Wij bieden u graag een helpende hand. Wij halen de woning voor u leeg en leveren deze bezemschoon op. Desgewenst wordt de inboedel tijdelijk opgeslagen of op een milieu vriendelijk manier afgevoerd. Moeten er nog herstelwerkzaamheden worden uitgevoerd? Geen probleem! Al deze zorgen nemen wij van u over zodat u zich op andere zaken kunt richten in deze hectische periode.
+                    | Een uitruiming van een woning of bedrijf is vaak een emotionele gebeurtenis. Door onze ervaring kunnen wij er, in overleg met u, voor zorgen dat de uitruiming discreet, netjes en respectvol verloopt. Het zwaarste deel nemen wij U graag uit handen. U haalt de persoonlijke spullen mee en wij regelen de rest. En wij ruimen echt alles op, niet dat ene leuke kastje of tafeltje maar echt alles. De woning leveren wij volgens afspraak helemaal schoon en leeg op. Geheel vrijblijvend informeren wij u graag over alle mogelijkheden. Wij doen meer dan alleen het uitruimen. Uitruimen in combinatie met een kleine verbouwing, bijvoorbeeld om de waarde van de woning te verhogen, is een van de mogelijkheden.
+                  p Wij werken onder andere samen met
+                  .row
+                    .col-md-3.col-sm-3
+                      a(href="http://rataplan.nl/")
+                        img.img-responsive(src='/images/logo_rataplan.png')
+                    .col-md-3.col-md-offset-1.col-sm-3.col-sm-offset-1
+                      a(href="https://www.reshare.nl/")
+                        img.img-responsive(src='/images/logo_reshare.png')
+                    .col-md-3.col-md-offset-1.col-sm-3.col-sm-offset-1
+                      a(href="http://www.its-your-finance.nl/")
+                        img.img-responsive(src='/images/logo_finance.png')
+
             .col-md-4
               aside.sidebar
                 .row
@@ -97,27 +115,27 @@ html.no-js
                         i.icon-check
                         a(href='#') Herstelwerkzaamheden aan de woning zodat deze weer verkoop- of verhuur klaar is
       footer#fh5co-footer(role='contentinfo')
-        .col-md-3.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+        .col-md-5.col-md-push-2.col-sm-4.col-xs-12.col-xs-push-0
           h3 Contact
           ul.float
             li
               a(href="mailto:info@dehuisuitruimers.nl") info@dehuisuitruimers.nl
             li
-              a(href="tel:+31683997538") Ruud Klok 06 - 83 99  75 38
+              a(href="tel:+31626340259") Ruud Klok 06 - 26 34 02 59
             li
-              a(href="tel:+31630231974") Erwin Prins 06 - 30 23 19 74
+              a(href="tel:+31627169502") Erwin Prins 06 - 27 16 95 02
 
-        .col-md-6.col-md-push-1.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+        .col-md-3.col-sm-5.col-xs-12.col-xs-push-0
           h3 In samenwerking met
           ul.float
             li
-              a(href='#') Autoverhuurbedrijf de Rijdende Wielen te Haarlem
+              a(href='http://rataplan.nl/') RataPlan
             li
-              a(href='#') Tweedehandswinkel Rataplan te Beverwijk
+              a(href='https://www.reshare.nl/') ReShare
             li
-              a(href='#') Tweedehandswinkel Seconhand te Zandvoort
+              a(href='http://www.its-your-finance.nl/') It's Your Finance
           
-        .col-md-2.col-md-push-1.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+        .col-md-2.col-sm-3.col-xs-12.col-xs-push-0
           h3 Volg ons op
           ul.fh5co-social
             li
@@ -132,6 +150,7 @@ html.no-js
               a(href='https://www.instagram.com/dehuisuitruimers/')
                 i.icon-instagram
                 |  Instagram
+
         .col-md-12.fh5co-copyright.text-center
           p#copyrightText
             | © 2017 Klok & Prins De Huisuitruimers

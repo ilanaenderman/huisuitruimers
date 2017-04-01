@@ -52,7 +52,7 @@ html.no-js
         .container
           .header-inner
             h1
-              a(href='home.html')
+              a(href='/')
                 img#logo(src='images/logo.png') 
             nav(role='navigation')
               ul
@@ -66,14 +66,23 @@ html.no-js
                   a(href='/news') Nieuws
                 li
                   a.active(href='/contact') Contact
+                - if(admin === undefined)
+                  li 
+                - else
+                  li
+                    a(href='/admin') Admin
+                  li
+                    a(href='/logout') Log uit
+                    
       #fh5co-contact-section
         .container
           .row
             .col-md-6.col-md-offset-3.text-center.fh5co-heading
               h2 Contact
-              p Heeft u vragen of wilt u dat wij langskomen voor een vrijblijvende offerte? Neem telefonisch contact met ons op of stuur een mail.
           .row#contact
-            .col-md-4.col-md-offset-1
+            .col-md-4.col-md-offset-2
+              p Heeft u vragen of wilt u dat wij langskomen voor een vrijblijvende offerte? 
+              p Neem telefonisch contact met ons op of stuur een mail.
               ul.contact-info
                 li.contact-info
                   i.sl-icon-map
@@ -87,30 +96,31 @@ html.no-js
                 li
                   i.sl-icon-envelope-open
                   a(href='#') info@dehuisuitruimers.nl
-            .col-md-6
+            .col-md-4
               #map(data-animate-effect='fadeIn')
+
       footer#fh5co-footer(role='contentinfo')
-        .col-md-3.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+        .col-md-5.col-md-push-2.col-sm-4.col-xs-12.col-xs-push-0
           h3 Contact
           ul.float
             li
               a(href="mailto:info@dehuisuitruimers.nl") info@dehuisuitruimers.nl
             li
-              a(href="tel:+31683997538") Ruud Klok 06 - 83 99  75 38
+              a(href="tel:+31626340259") Ruud Klok 06 - 26 34 02 59
             li
-              a(href="tel:+31630231974") Erwin Prins 06 - 30 23 19 74
+              a(href="tel:+31627169502") Erwin Prins 06 - 27 16 95 02
 
-        .col-md-6.col-md-push-1.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+        .col-md-3.col-sm-5.col-xs-12.col-xs-push-0
           h3 In samenwerking met
           ul.float
             li
-              a(href='#') Autoverhuurbedrijf de Rijdende Wielen te Haarlem
+              a(href='http://rataplan.nl/') RataPlan
             li
-              a(href='#') Tweedehandswinkel Rataplan te Beverwijk
+              a(href='https://www.reshare.nl/') ReShare
             li
-              a(href='#') Tweedehandswinkel Seconhand te Zandvoort
+              a(href='http://www.its-your-finance.nl/') It's Your Finance
           
-        .col-md-2.col-md-push-1.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+        .col-md-2.col-sm-3.col-xs-12.col-xs-push-0
           h3 Volg ons op
           ul.fh5co-social
             li
@@ -125,6 +135,7 @@ html.no-js
               a(href='https://www.instagram.com/dehuisuitruimers/')
                 i.icon-instagram
                 |  Instagram
+
         .col-md-12.fh5co-copyright.text-center
           p#copyrightText
             | © 2017 Klok & Prins De Huisuitruimers

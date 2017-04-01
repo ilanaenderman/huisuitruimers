@@ -7,7 +7,9 @@ const db      = require(__dirname + '/../modules/database')
 
 // GET Show three newest salesman
 router.get('/news', (request, response) => {
-  response.render('news')
+	db.news.findAll().then( news => {
+		response.render('news', {news: news, admin: request.session.user})
+	})
 })
 
 module.exports = router

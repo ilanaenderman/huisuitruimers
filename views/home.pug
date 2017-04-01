@@ -46,7 +46,7 @@ html.no-js
         .container
           .header-inner
             h1
-              a(href='home.html')
+              a(href='/')
                 img#logo(src='images/logo.png') 
             nav(role='navigation')
               ul
@@ -60,6 +60,13 @@ html.no-js
                   a(href='/news') Nieuws
                 li
                   a(href='/contact') Contact
+                - if(admin === undefined)
+                  li 
+                - else
+                  li
+                    a(href='/admin') Admin
+                  li
+                    a(href='/logout') Log uit
       
       
       #fh5co-intro-section
@@ -67,75 +74,80 @@ html.no-js
           .row
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
-                div.homeImg
+                a(href='#')
+                  img.img-responsive(src='/images/diensten.jpg' alt='Blog')
                 .desc
-                  h3
+                  h3.home
                     b Onze diensten
-                  p
+                  p.home1
                     | Wij ontzorgen niet alleen bij het leeghalen van een woning, bedrijf of garage maar wij gaan een stap verder
-                  p
+                  p.home1
                     a.btn.btn-primary.btn-outline.with-arrow(href='/services')
                       | Lees meer
                       i.icon-arrow-right
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
-                div.homeImg
+                a(href='#')
+                  img.img-responsive(src='/images/us.jpg' alt='Blog')
                 .desc
-                  h3
+                  h3.home
                     b Wie zijn wij?
-                  p
+                  p.home1
                     | Persoonlijkheid en vakkundigheid staan bij ons hoog in het vaandel. Wij stellen ons graag aan u voor.
-                  p
+                  p.home1
                     a.btn.btn-primary.btn-outline.with-arrow(href='/about')
                       | Lees meer
                       i.icon-arrow-right
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
-                div.homeImg
+                a(href='#')
+                  img.img-responsive(src='/images/contact.jpg' alt='Blog')
                 .desc
-                  h3
+                  h3.home
                     b Contact
-                  p
+                  p.home1
                     | Kunnen wij een offerte voor u opmaken of wilt u meer informatie? Neem gerust contact met ons op.
-                  p
+                  p.home1
                     a.btn.btn-primary.btn-outline.with-arrow(href='/contact')
                       | Lees meer
                       i.icon-arrow-right
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
-                div.homeImg
+                a(href='#')
+                  img.img-responsive(src= news.image alt='Blog')
                 .desc
-                  h3
-                    b Nieuws
-                  p
-                    | Laatste nieuws over ons bedrijf en alle doelen die wij steunen in Haarlem en omgeving. 
-                  p
+                  h3.home
+                    b Laatste nieuws
+                  p.home1 
+                    b #{news.title} 
+                  p.home1 #{news.date}
+                  p.home1
                     a.btn.btn-primary.btn-outline.with-arrow(href='/news')
                       | Lees meer
                       i.icon-arrow-right
       
       footer#fh5co-footer(role='contentinfo')
-        .col-md-3.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+        .col-md-5.col-md-push-2.col-sm-4.col-xs-12.col-xs-push-0
           h3 Contact
           ul.float
             li
               a(href="mailto:info@dehuisuitruimers.nl") info@dehuisuitruimers.nl
             li
-              a(href="tel:+31683997538") Ruud Klok 06 - 83 99  75 38
+              a(href="tel:+31626340259") Ruud Klok 06 - 26 34 02 59
             li
-              a(href="tel:+31630231974") Erwin Prins 06 - 30 23 19 74
+              a(href="tel:+31627169502") Erwin Prins 06 - 27 16 95 02
 
-        .col-md-6.col-md-push-1.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+        .col-md-3.col-sm-5.col-xs-12.col-xs-push-0
           h3 In samenwerking met
           ul.float
             li
-              a(href='#') Autoverhuurbedrijf de Rijdende Wielen te Haarlem
+              a(href='http://rataplan.nl/') RataPlan
             li
-              a(href='#') Tweedehandswinkel Rataplan te Beverwijk
+              a(href='https://www.reshare.nl/') ReShare
             li
-              a(href='#') Tweedehandswinkel Seconhand te Zandvoort
+              a(href='http://www.its-your-finance.nl/') It's Your Finance
           
-        .col-md-2.col-md-push-1.col-sm-12.col-sm-push-0.col-xs-12.col-xs-push-0
+        .col-md-2.col-sm-3.col-xs-12.col-xs-push-0
           h3 Volg ons op
           ul.fh5co-social
             li
@@ -150,6 +162,7 @@ html.no-js
               a(href='https://www.instagram.com/dehuisuitruimers/')
                 i.icon-instagram
                 |  Instagram
+
         .col-md-12.fh5co-copyright.text-center
           p#copyrightText
             | © 2017 Klok & Prins De Huisuitruimers

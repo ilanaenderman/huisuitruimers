@@ -1,23 +1,15 @@
-doctype html
-//if lt IE 7
-  html.no-js.lt-ie9.lt-ie8.lt-ie7  
-//if IE 7
-  html.no-js.lt-ie9.lt-ie8  
-//if IE 8
-  html.no-js.lt-ie9  
-// [if gt IE 8] <!
 html.no-js
-  // <![endif]
+
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title Over ons
+    title Nieuws
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='Klok en Prins de Huisuitruimers helpen u een helpen de hand bij het uitruimen van een woning')
     meta(name='keywords', content='Huisuitruimers, Haarlem, huisoperuimers, verhuizen, Prins, Klok')
-    meta(name='author', content='Ilana Enderman')
-      
-    // Facebook and Twitter integration
+    meta(name='Ilana Enderman')
+   
+    //- Facebook and Twitter integration
     meta(property='og:title', content='')
     meta(property='og:image', content='')
     meta(property='og:url', content='')
@@ -27,24 +19,26 @@ html.no-js
     meta(name='twitter:image', content='')
     meta(name='twitter:url', content='')
     meta(name='twitter:card', content='')
-    // Place favicon.ico and apple-touch-icon.png in the root directory
+    
+    //- icons
     link(rel='shortcut icon', href='favicon.ico')
     link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700', rel='stylesheet')
-    // Animate.css
+    
+    //- Animate.css
     link(rel='stylesheet', href='css/animate.css')
-    // Icomoon Icon Fonts
+    //- Icomoon Icon Fonts
     link(rel='stylesheet', href='css/icomoon.css')
-    // Simple Line Icons
+    //- Simple Line Icons
     link(rel='stylesheet', href='css/simple-line-icons.css')
-    // Bootstrap
+    //- Bootstrap
     link(rel='stylesheet', href='css/bootstrap.css')
-    // Theme style
+    //- Theme style
     link(rel='stylesheet', href='css/style.css')
-    // Modernizr JS
+    //- Modernizr JS
     script(src='js/modernizr-2.6.2.min.js')
-    // FOR IE9 below
-    //if lt IE 9
+    //- FOR IE9 below
+    //-if lt IE 9
       script(src='js/respond.min.js')
   body
     #fh5co-page
@@ -61,9 +55,9 @@ html.no-js
                 li
                   a(href='/services') Onze diensten
                 li
-                  a.active(href='/about') Wie zijn wij?
+                  a(href='/about') Wie zijn wij?
                 li
-                  a(href='/news') Nieuws
+                  a.active(href='/news') Nieuws
                 li
                   a(href='/contact') Contact
                 - if(admin === undefined)
@@ -73,28 +67,29 @@ html.no-js
                     a(href='/admin') Admin
                   li
                     a(href='/logout') Log uit
-                    
-      #fh5co-about-section
+      
+      #fh5co-blog-section
         .container
           .row
             .col-md-6.col-md-offset-3.text-center.fh5co-heading
-              h2 Wie zijn wij?
+              h2 Het laatste nieuws
           .row
-            .col-md-6
-              .row
-                .col-md-12#sidebar
-                  .about-inner-left
-                    img.img-reponsive#aboutImg(src= ruud.image alt='About')
-                    h3 #{ruud.name}
-                    p.aboutBottom #{ruud.info}
-            .col-md-6
-              .row
-                .col-md-12
-                  .about-inner-right
-                    img.img-reponsive#aboutImg(src= erwin.image alt='About')
-                    h3 #{erwin.name}
-                    p.aboutBottom #{erwin.info}
-                    
+          - news.sort(function(a,b){
+            - return b.id - a.id
+          - })
+          each thing in news
+            .col-md-4.col-lg-3.col-sm-6.text-center
+              .blog-inner
+                a(href='#')
+                  img.img-responsiveNews(src= thing.image alt='Blog')
+                .descNews
+                  h3.news
+                    b #{thing.title}
+                  h5 #{thing.date}
+                .desc
+                  form(method='post' action='/newsArticle')
+                    button.btn.btn-primary.btn-outline(type='submit' href='/newsArticle' value= thing.id  name='ID') Lees meer
+      
       footer#fh5co-footer(role='contentinfo')
         .col-md-5.col-md-push-2.col-sm-4.col-xs-12.col-xs-push-0
           h3 Contact
@@ -131,6 +126,7 @@ html.no-js
               a(href='https://www.instagram.com/dehuisuitruimers/')
                 i.icon-instagram
                 |  Instagram
+
         .col-md-12.fh5co-copyright.text-center
           p#copyrightText
             | © 2017 Klok & Prins De Huisuitruimers

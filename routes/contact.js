@@ -7,7 +7,7 @@ const db      = require(__dirname + '/../modules/database')
 
 // GET Show three newest salesman
 router.get('/contact', (request, response) => {
-  response.render('contact')
+  response.render('contact', {admin: request.session.user})
 })
 
 module.exports = router
