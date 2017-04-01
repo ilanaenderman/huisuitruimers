@@ -114,17 +114,27 @@ html.no-js
             .col-md-4.col-lg-3.col-sm-6.text-center
               .blog-inner
                 a(href='#')
-                  img.img-responsive(src= news.image alt='Blog')
+                  - if(news === undefined)
+                    img.img-responsive(src= 'images/recycle.jpg')
+                  - else
+                    img.img-responsive(src= news.image alt='Blog')
                 .desc
                   h3.home
                     b Laatste nieuws
-                  p.home1 
-                    b #{news.title} 
-                  p.home1 #{news.date}
-                  p.home1
-                    a.btn.btn-primary.btn-outline.with-arrow(href='/news')
-                      | Lees meer
-                      i.icon-arrow-right
+                  -if(news === undefined)
+                    p.home1 
+                      b Nieuws
+                  - else
+                    p.home1
+                      b #{news.title} 
+                  -if(news === undefined)
+                    p.home1 ...
+                  - else
+                    p.home1 #{news.date}
+                    p.home1
+                      a.btn.btn-primary.btn-outline.with-arrow(href='/news')
+                        | Lees meer
+                        i.icon-arrow-right
       
       footer#fh5co-footer(role='contentinfo')
         .col-md-5.col-md-push-2.col-sm-4.col-xs-12.col-xs-push-0

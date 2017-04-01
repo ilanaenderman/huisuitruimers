@@ -74,39 +74,39 @@ html.no-js
               h2 Update nieuwsitem
               h4#message= message
           div.row
-            form(action='/updateArticle' method='post' enctype="multipart/form-data" autocomplete='off')
-              div.col-md-6
-                div.row
-                  div.col-md-12
-                    div.form-group
-                      input.form-control(name='title' placeholder= thing.title type='text') 
-                  div.col-md-12
-                    div.form-group
-                      input.form-control(name='date' placeholder= thing.date type='string')
-                  div.col-md-12
-                    div.form-group
-                      input.form-control(name='image' placeholder= thing.image type='file')
-              div.col-md-6
-                div.row
-                  div.col-md-12
-                    div.form-group
-                      textarea.form-control(name='body' placeholder= thing.body cols='30' rows='7')
-                  input#ID.form-control(name='id', value= thing.id type='hidden')
+            div.col-md-6
+              form(action='/updateArticle' method='post' autocomplete='off')
+                  div.row
+                    div.col-md-12
+                      div.form-group
+                        label Titel
+                        input.form-control(name='title' placeholder= thing.title type='text') 
+                    div.col-md-12
+                      div.form-group
+                        label Datum
+                        input.form-control(name='date' placeholder= thing.date type='string')
+                    div.col-md-12
+                      div.form-group
+                        label Tekst
+                        textarea.form-control(name='body' placeholder= thing.body cols='30' rows='13')
+                        input.form-control(name='id', value= thing.id type='hidden')
 
-              div.col-md-12
+                  div.col-md-6
+                    div.form-group
+                      input.btn.btn-primary(value='update' type='submit')
+
+            div.col-md-6
+            form(action='/updateImage' method='post' enctype="multipart/form-data")
+              div.col-md-6
+                img.img-responsive(src= thing.image alt='Blog')
+              div.col-md-6
                 div.form-group
-                  input.btn.btn-primary(value='update' type='submit')
-
-          //- div.row
-          //-   form(action='/updateImage' method='post' enctype="multipart/form-date")
-          //-     div.col-md-6
-          //-       div.form-group
-          //-         label Kies Foto
-          //-         input.form-control(name='image' placeholder= thing.image type='file')
-          //-         input.form-control(name='newsId', value= thing.id type='hidden')
-          //-     div.col-md-6
-          //-       div.form-group
-          //-         input.btn.btn-primary(value='Verander afbeelding' type='submit')
+                  label Kies nieuwe foto
+                  input.form-control(name='image' placeholder= thing.image type='file')
+                  input.form-control(name='id', value= thing.id type='hidden')
+              div.col-md-6
+                div.form-group
+                  input.btn.btn-primary(value='Verander afbeelding' type='submit')
 
 
       footer#fh5co-footer(role='contentinfo')

@@ -71,6 +71,7 @@ html.no-js
           div.row
             div.col-md-8.col-md-offset-2.text-center
               h2 Maak nieuwsitem
+              h4#message= message
           div.row
             form(action='/createArticle' method='post' enctype='multipart/form-data' autocomplete='off')
               div.col-md-6
@@ -117,6 +118,8 @@ html.no-js
                 .desc
                   form(method='post' action='/goToArticle')
                     button.btn.btn-primary.btn-outline(type='submit' href='/goToArticle' value= thing.id name='ID') Update
+                  form(method='post' action='/deleteArticle')
+                    button.btn.btn-primary.btn-outline(type='submit' value= thing.id name='ID') Delete
 
       footer#fh5co-footer(role='contentinfo')
         .col-md-4.col-md-push-2.col-sm-4.col-xs-12.col-xs-push-0

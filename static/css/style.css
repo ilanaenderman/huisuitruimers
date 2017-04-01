@@ -77,6 +77,9 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
   background: #F89900; }
 
+#message {
+  color: #F89900; }
+
 #logo {
   max-height: 110px;
   display: block; }
