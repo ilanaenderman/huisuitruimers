@@ -6,7 +6,9 @@ const db = { }
 const sequelize = require( 'sequelize' )
 const bcrypt 	= require('bcrypt-node')
 
-db.conn = new sequelize('straatjournaal', process.env.POSTGRES_USER, process.env.POSTGRES_PASSWORD, {
+
+// LET OP STRAATJOURNAAL IS NAAM DATABASE OP SERVER DIGITAL OCEAN
+db.conn = new sequelize('huisuitruimers', process.env.POSTGRES_USER, process.env.POSTGRES_PASSWORD, {
 	host: 'localhost',
 	dialect: 'postgres'
 })
@@ -28,7 +30,7 @@ db.user = db.conn.define('user', {
 
 
 // Create test user/news
-db.conn.sync({force: true}).then( database => {
+db.conn.sync({force: false}).then( database => {
 	bcrypt.hash('Enschede2017', null, null, (err, hash) => {
 		db.user.create({
 			name: 'Ruud Klok',
